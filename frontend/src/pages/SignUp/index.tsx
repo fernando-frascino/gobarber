@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 
-import getValidationsErrors from '../../utils/getValidationErrors';
+import getValidationErrors from '../../utils/getValidationErrors';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -32,7 +32,7 @@ const SignUp: React.FC = () => {
         abortEarly: false,
       });
     } catch (err) {
-      const errors = getValidationsErrors(err);
+      const errors = getValidationErrors(err);
       formRef.current?.setErrors(errors);
     }
   }, []);
