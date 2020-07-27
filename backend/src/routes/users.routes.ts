@@ -15,15 +15,11 @@ usersRouter.post('/', async (request, response) => {
 
   const creataUser = new CreateUserService();
 
-  console.log('Criou o Service')
-
   const user = await creataUser.execute({
     name,
     email,
     password,
   });
-
-  console.log('Criou o User');
 
   delete user.password;
 
