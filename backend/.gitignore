@@ -106,3 +106,4 @@ dist
 # File uploads
 tmp/*
 !tmp/.gitkeep
+!tmp/uploads
